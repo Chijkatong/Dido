@@ -29,6 +29,14 @@ def palm():
 def mj():
     return(render_template("mj.html"))
 
+@app.route("/music",methods=["GET","POST"])
+def music():
+    return(render_template("music.html"))
+
+@app.route("/video",methods=["GET","POST"])
+def video():
+    return(render_template("vidoe.html"))
+
 @app.route("/result_palm",methods=["GET","POST"])
 def result_palm():
     q = request.form.get("q")
